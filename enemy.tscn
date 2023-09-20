@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://jiv1178rj6r6"]
+
+[ext_resource type="Script" path="res://enemy.gd" id="1_6dumd"]
+[ext_resource type="Texture2D" uid="uid://8g7rdjqggm5n" path="res://dodge_the_creeps_2d_assets/art/png-transparent-avshalom-cave-stalactite-stalagmite-stalactite-s-shoe-stalactite-cliparts-solutional-cave-thumbnail.png" id="1_80pfq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_adlkm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_80pfq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Enemy" type="RigidBody2D"]
+position = Vector2(203, 102)
+gravity_scale = 2.0
+script = ExtResource("1_6dumd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(29, 65)
+scale = Vector2(0.171528, 0.0872625)
+sprite_frames = SubResource("SpriteFrames_adlkm")
